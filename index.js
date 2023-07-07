@@ -130,7 +130,7 @@ async function setupObjects(longitude, latitude) {
   // agregar un modelo en una latitud y longitud determinada.
   let modeloBase = new THREE.Object3D();
   await cargarModelo("modelo/modeloMeteorito.glb", modeloBase).then((resultado) => {});
-  threex.add(modeloBase, -58.987847503032673, -27.457250496608915);
+  threex.add(modeloBase, -58.98619684536146 , -27.449434678195868);
 
 }
 

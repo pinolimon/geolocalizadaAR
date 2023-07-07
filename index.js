@@ -89,12 +89,12 @@ if (!isMobile()) {
     if (e.clientX < lastX) {
       camera.rotation.y -= oneDegAsRad * 4;
       if (camera.rotation.y < 0) {
-        camera.rotation.y += 2 * Math.PI;
+        camera.rotation.y += 1 * Math.PI;
       }
     } else if (e.clientX > lastX) {
       camera.rotation.y += oneDegAsRad * 4;
-      if (camera.rotation.y > 2 * Math.PI) {
-        camera.rotation.y -= 2 * Math.PI;
+      if (camera.rotation.y > 1 * Math.PI) {
+        camera.rotation.y -= 1 * Math.PI;
       }
     }
     lastX = e.clientX;
@@ -130,7 +130,7 @@ async function setupObjects(longitude, latitude) {
   // agregar un modelo en una latitud y longitud determinada.
   let modeloBase = new THREE.Object3D();
   await cargarModelo("modelo/modeloMeteorito.glb", modeloBase).then((resultado) => {});
-  threex.add(modeloBase, -58.987847503032675, -27.457250496608918);
+  threex.add(modeloBase, -58.987847503032673, -27.457250496608915);
 
 }
 

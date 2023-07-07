@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        html,
+        body {
+            height: 100%;
+            background-color: black;
+        }
+            
+        button {
+            background-color: rgb(219, 219, 219);
+        }
+        i {
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid grey;
+            padding: 10px;
+        }
+        button {
+            background-color: white;
+            border-radius: 50%;
+            border: 1px solid grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icono{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{        
+            height: 20vw;
+            width: 20vw;
+            margin: 0px 4vw;
+        }
+        i {
+            height:  11vw;
+            width:  11vw;
+        }
+        .icono{
+            font-size: 12vw;
+        }  
+
+        @media (orientation: landscape) {
+            button{        
+                height: 20vh;
+                width: 20vh;
+                margin: 0px 4vh;
+            }
+            i {
+                height:  11vh;
+                width:  11vh;
+            }
+            .icono{
+                font-size: 12vh;
+            }  
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video1" autoplay playsinline style="display:none"></video>
+    <canvas id="canvas1" style='background-color: rgb(0, 0, 0); width:100%; height:100%; display:block'></canvas>
+
+    <script src='./three/three.js'></script>
+    
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js"></script>
+    <script type='module' src="index.js"></script>
+    
+    <a id="botonPermisos" style="position: absolute;display: flex; justify-content: center; bottom: 7vw; width: 100%;">
+        <button id="botPermiso" type="button" ><i id="share_location" class="material-icons icono">share_location</i></button>
+    </a>;
+</body>
+
+</html>
